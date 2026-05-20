@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(koshi8bit-easy-living-how-to-use LANGUAGES CXX)
 
+# IF CHANGED - GO TO `Build -> Clear CMake configuration`, delete `build` folder, and then `Build -> Run CMake`
 option(KOSHI8BIT_LIB_EASY_LIVING_COMPILE_FROM_SRC
     "Compile 'libs/koshi8bit/easy-living' from source (ON) or from DLL (OFF)"
     OFF)
@@ -22,7 +23,7 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR = " ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 if(KOSHI8BIT_LIB_EASY_LIVING_COMPILE_FROM_SRC)
-    message(STATUS "Compile `koshi8bit/easy-living` from SRC")
+    message(STATUS "Compile `libs/koshi8bit/easy-living` from SRC")
 
     list(APPEND BASE_SOURCES
         libs/koshi8bit/easy-living/koshi8bit-easy-living_global.h
@@ -51,7 +52,7 @@ if(KOSHI8BIT_LIB_EASY_LIVING_COMPILE_FROM_SRC)
 
 else()
 
-    message(STATUS "Compile `koshi8bit/easy-living` with binary (DLL)")
+    message(STATUS "Compile `libs/koshi8bit/easy-living` with binary (DLL)")
 
     target_include_directories(${PROJECT_NAME}
         PRIVATE
