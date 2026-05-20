@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(koshi8bit-easy-living-howto-use LANGUAGES CXX)
+project(koshi8bit-easy-living-how-to-use LANGUAGES CXX)
 
 option(KOSHI8BIT_LIB_EASY_LIVING_COMPILE_FROM_SRC
     "Compile 'libs/koshi8bit/easy-living' from source (ON) or from DLL (OFF)"
